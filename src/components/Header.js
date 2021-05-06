@@ -1,6 +1,9 @@
 import React from 'react';
 import "./styles/Header.css";
-
+import { Avatar } from "@material-ui/core";
+import AccessTimeIcon from "@material-ui/icons/AccessTime";
+import SearchIcon from "@material-ui/icons/Search";
+import HelpOutlineIcon from "@material-ui/icons/HelpOutline";
 
 const Header = () => {
     return (
@@ -8,8 +11,15 @@ const Header = () => {
             <h1>I am the header</h1>
 
             <div className="header__left">
-            {/*    Avatarr for logged in user   */}
-            {/*    Time Icon here   */}
+                <Avatar
+                    className="header__avatar"
+                    alt="Rokas"
+                    src=""
+                />
+            {/*    Avatar for logged in user   */}
+                <AccessTimeIcon />
+
+                {/*    Time Icon here   */}
             </div>
 
             <div className="header__search">
