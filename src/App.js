@@ -1,7 +1,7 @@
 import './App.css';
 import Header from "./components/Header";
 import Sidebar from "./components/Sidebar";
-import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Chat from "./components/Chat";
 
 function App() {
