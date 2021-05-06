@@ -1,6 +1,7 @@
 import React from 'react';
 import "./styles/Chat.css";
 import { useParams } from "react-router-dom";
+import {InfoOutlined as InfoOutlinedIcon, StarBorderOutlined} from "@material-ui/icons";
 
 const Chat = () => {
 
@@ -10,7 +11,20 @@ const Chat = () => {
 
     return (
         <div className="chat">
-                <h1>This is chat {roomId} room</h1>
+            <div className="chat__header">
+                <div className="chat__headerLeft">
+                    <h4 className="chat__channelName">
+                        <strong># General room 🚀</strong>
+                        <StarBorderOutlined />
+                    </h4>
+                </div>
+
+                <div className="chat__headerRight">
+                    <p>
+                        <InfoOutlinedIcon /> Details
+                    </p>
+                </div>
+            </div>
         </div>
     );
 };
