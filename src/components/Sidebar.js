@@ -41,6 +41,9 @@ const Sidebar = () => {
             <SidebarOption Icon={ExpandMoreIcon} title="Channels" />
             <hr />
             <SidebarOption Icon={AddIcon} addChannelOption title="Add Channel" />
+
+        {/*    COnnect db and list all the channels*/}
+        {/*     SidebarOption component */}
         </div>
     );
 };
