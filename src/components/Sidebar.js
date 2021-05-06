@@ -68,10 +68,11 @@ const Sidebar = () => {
 
         {/*    COnnect db and list all the channels*/}
         {/*     SidebarOption component */}
-
-        {/*    {channels.map(channel => (*/}
-        {/*        <SidebarOption title={channel.name} id={channel.id} />*/}
-        {/*    ))}*/}
+        {/* it goes per channels state, per each channel and takes the title and id, passes to the sidebar option*/}
+        {/*    and it renders the option with #*/}
+            {channels.map(channel => (
+                <SidebarOption title={channel.name} id={channel.id} />
+            ))}
         </div>
     );
 };
