@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="41d52637-7be8-4f15-ba25-3b5b76317afb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/SidebarOption.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/styles/SidebarOption.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/styles/Sidebar.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/styles/Sidebar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Sidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Sidebar.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,7 +31,9 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -54,7 +59,7 @@
       <option name="presentableId" value="Default" />
       <updated>1620279372296</updated>
       <workItem from="1620279376332" duration="45000" />
-      <workItem from="1620279437108" duration="4096000" />
+      <workItem from="1620279437108" duration="4775000" />
     </task>
     <servers />
   </component>
