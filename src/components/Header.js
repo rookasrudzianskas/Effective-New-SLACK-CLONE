@@ -23,11 +23,14 @@ const Header = () => {
             </div>
 
             <div className="header__search">
+                <SearchIcon />
             {/*    Search Icon  */}
+                <input placeholder="Search Slack" />
             {/*    input    */}
             </div>
 
             <div className="header__right">
+                <HelpOutlineIcon />
             {/*     help icon   */}
 
             </div>
