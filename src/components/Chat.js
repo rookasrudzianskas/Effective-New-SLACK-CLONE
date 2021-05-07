@@ -36,7 +36,8 @@ const Chat = () => {
             <div className="chat__header">
                 <div className="chat__headerLeft">
                     <h4 className="chat__channelName">
-                        <strong>#  🚀</strong>
+                        {/* ? if there is no details, so do not freak out*/}
+                        <strong>#{roomDetails?.name}  🚀</strong>
                         <StarBorderOutlined />
                     </h4>
                 </div>
