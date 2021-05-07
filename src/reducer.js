@@ -21,6 +21,9 @@ const reducer = (state, action) => {
                 // so this basically takes the payload from teh shooted action data (payload) and updates with it the user
                 user: action.user
             }
-
+        default:
+            return state;
     }
 }
+
+export default reducer;
