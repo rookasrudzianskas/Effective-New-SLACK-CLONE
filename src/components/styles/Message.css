@@ -1,6 +1,7 @@
 .message {
     display: flex;
     align-items: center;
+    padding: 20px;
 }
 
 .message > img {
@@ -8,12 +9,13 @@
     width: 50px;
     object-fit: contain;
     border-radius: 999px;
-    padding: 5px;
+    /*padding: 5px;*/
 }
 
 .message__timestamp {
     color: gray;
     font-weight: 300;
+    font-size: 13px;
 }
 
 .message__info {
