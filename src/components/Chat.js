@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import {InfoOutlined as InfoOutlinedIcon, StarBorderOutlined} from "@material-ui/icons";
 import db from "../firebase";
 import Message from "./Message";
+import ChatInput from "./ChatInput";
 
 const Chat = () => {
 
@@ -71,6 +72,10 @@ const Chat = () => {
                     />
                 ))}
             </div>
+
+            {/* this is the chat input, and it takes two props one is room details name, because we have to know the room name */}
+            {/* and the id, becaise we are going to need it, to know to exactly which room to push the message in*/}
+            <ChatInput channelName={roomDetails?.name} channelId={roomId} />
         </div>
     );
 };
