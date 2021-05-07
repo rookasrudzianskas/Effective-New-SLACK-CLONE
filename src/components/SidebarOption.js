@@ -1,9 +1,9 @@
 import React from 'react';
 import "./styles/SidebarOption.css";
 
-const SidebarOption = ({Icon, title}) => {
+const SidebarOption = ({Icon, title, addChannelOption, id}) => {
     return (
-        <div className="sidebarOption">
+        <div className="sidebarOption" onClick={addChannelOption ? addChannel : selectChannel}>
             {/*rendering the icon*/}
             {/* if the icon exsists, we show the icon*/}
             {Icon && <Icon className="sidebarOption__icon" />}
