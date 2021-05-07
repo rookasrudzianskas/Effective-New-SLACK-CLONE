@@ -4,6 +4,7 @@ import Sidebar from "./components/Sidebar";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Chat from "./components/Chat";
 import {useState} from "react";
+import Login from "./components/Login";
 
 function App() {
 
@@ -14,7 +15,7 @@ function App() {
         <Router>
             {/* if we do not have the user, so show the login page, if we have so redirect to the app*/}
             {!user ? (
-                <h1>Login page</h1>
+                <Login />
             ) : (
                 <>
              <Header />
