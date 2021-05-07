@@ -3,11 +3,20 @@ import Header from "./components/Header";
 import Sidebar from "./components/Sidebar";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Chat from "./components/Chat";
+import {useState} from "react";
 
 function App() {
+
+    const [user, setUser ] = useState(null);
+
   return (
     <div className="app">
         <Router>
+            {/* if we do not have the user, so show the login page, if we have so redirect to the app*/}
+            {!user ? (
+                <h1>Login page</h1>
+            ) : (
+                <>
              <Header />
         {/*    Header   */}
 
@@ -28,7 +37,8 @@ function App() {
 
             {/*    React router -> Chat screen  */}
         </div>
-
+                </>
+                )}
         </Router>
     </div>
   );
