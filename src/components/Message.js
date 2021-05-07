@@ -13,6 +13,7 @@ const Message = ({ message, timestamp, user, userImage}) => {
                     {/* we get back the timestamp from the server */}
                     {/* with JS we get the new Date*/}
                     {/* it just puts the timestamp in the beautiful format and not that long number*/}
+                    {/* checks if there is an timestamp*/}
                     {user} <span className="message__timestamp">{new Date(timestamp?.toDate()).toUTCString()}</span>
                 </h4>
 
