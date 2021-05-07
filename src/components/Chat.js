@@ -11,7 +11,8 @@ const Chat = () => {
     const { roomId } = useParams();
 // we need this to store the name and other details of the room by the following it in this state
     const [roomDetails, setRoomDetails] = useState(null);
-    // console.log(roomDetails)
+    const [roomMessages, setRoomMessages] = useState(null);
+    console.log(roomMessages)
 
     // this is going to fire the times then the roomId changes, so this means, every time it runs, if checks, if have the room id
     // room id is that /roomms/ dasdasdsad the url and if we have it like that, so we do this code
@@ -26,6 +27,13 @@ const Chat = () => {
                 /// and set it to the state
                 setRoomDetails(snapshot.data())
             ))
+            // for the second time go to the rooms collection, take the document with the required id, and go to the collection messages
+            // inside that room with the following id, and orderBy by the timestamp, soo it means the time it was sent
+            // go to the messages collection and set the messages state to all what it is now in ti, so it takes the snapshot
+            // meansing all the data inside and iterates per each doc, to get each data info separately and store in the messages state
+            // the user, message, name, info and s o on
+            db.collection('rooms').doc(roomId).collection('messages').orderBy('timestamp', 'asc')
+                .onSnapshot(snapshot => setRoomMessages(snapshot.docs.map(doc => doc.data())))
         }
     }, [roomId])
 
