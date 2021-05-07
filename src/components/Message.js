@@ -6,11 +6,14 @@ const Message = ({ message, timestamp, user, userImage}) => {
     // ? add the try catch instantly and do not let the code to break in
     return (
         <div className="message">
-            <img src={userImage} alt=""/>
+            <img className="messageUserImage" src={userImage} alt=""/>
 
             <div className="message__info">
                 <h4>
-                    {user} timestamp....
+                    {/* we get back the timestamp from the server */}
+                    {/* with JS we get the new Date*/}
+                    {/* it just puts the timestamp in the beautiful format and not that long number*/}
+                    {user} <span className="message__timestamp">{new Date(timestamp?.toDate()).toUTCString()}</span>
                 </h4>
 
                 <p>{message}</p>
