@@ -5,11 +5,13 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Chat from "./components/Chat";
 import {useState} from "react";
 import Login from "./components/Login";
+import {useStateValue} from "./StateProvider";
 
 function App() {
 
-    const [user, setUser ] = useState(null);
-
+    // this is how we access the data layer from all components
+    const [{user}, dispatch] = useStateValue();
+    // console.log(user)
   return (
     <div className="app">
         <Router>
