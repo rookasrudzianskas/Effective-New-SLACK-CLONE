@@ -18,10 +18,13 @@ import SidebarOption from "./SidebarOption";
 import db from "../firebase";
 import '@firebase/firestore';
 import 'firebase/firestore';
+import {useStateValue} from "../StateProvider";
 
 const Sidebar = () => {
     // we are going to store all the channels here
     const [channels, setChannels] = useState([]);
+    // we are accessing the data layer, and getting the user object
+    const [{user}] = useStateValue();
     console.log(channels);
 
     useEffect(() => {
@@ -48,7 +51,8 @@ const Sidebar = () => {
                 <h2>Brainlyemails & CONNEXIOUS Startups</h2>
                 <h3>
                     <FiberManualRecordIcon />
-                    Rokas Rudzianskas
+                    {/* in here we just access the user object from data layer, and show the name from it*/}
+                    {user?.displayName}
                 </h3>
                 </div>
                 <CreateIcon />
