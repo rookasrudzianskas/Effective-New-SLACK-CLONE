@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="41d52637-7be8-4f15-ba25-3b5b76317afb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/Message.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/styles/Message.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Chat.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Chat.js" afterDir="false" />
     </list>
@@ -56,7 +58,7 @@
       <option name="presentableId" value="Default" />
       <updated>1620279372296</updated>
       <workItem from="1620279376332" duration="45000" />
-      <workItem from="1620279437108" duration="14809000" />
+      <workItem from="1620279437108" duration="15385000" />
     </task>
     <servers />
   </component>

@@ -3,6 +3,7 @@ import "./styles/Chat.css";
 import { useParams } from "react-router-dom";
 import {InfoOutlined as InfoOutlinedIcon, StarBorderOutlined} from "@material-ui/icons";
 import db from "../firebase";
+import Message from "./Message";
 
 const Chat = () => {
 
@@ -11,7 +12,7 @@ const Chat = () => {
     const { roomId } = useParams();
 // we need this to store the name and other details of the room by the following it in this state
     const [roomDetails, setRoomDetails] = useState(null);
-    const [roomMessages, setRoomMessages] = useState(null);
+    const [roomMessages, setRoomMessages] = useState([]);
     console.log(roomMessages)
 
     // this is going to fire the times then the roomId changes, so this means, every time it runs, if checks, if have the room id
@@ -32,6 +33,7 @@ const Chat = () => {
             // go to the messages collection and set the messages state to all what it is now in ti, so it takes the snapshot
             // meansing all the data inside and iterates per each doc, to get each data info separately and store in the messages state
             // the user, message, name, info and s o on
+            // and stores in the messages store
             db.collection('rooms').doc(roomId).collection('messages').orderBy('timestamp', 'asc')
                 .onSnapshot(snapshot => setRoomMessages(snapshot.docs.map(doc => doc.data())))
         }
@@ -55,6 +57,19 @@ const Chat = () => {
                         <InfoOutlinedIcon /> Details
                     </p>
                 </div>
+            </div>
+            <div className="chat__messages">
+            {/*    <Message />*/}
+            {/* this goes per all room messages and takes the all the props, then passes it to the Message component*/}
+            {/*     as the props all the data */}
+                {roomMessages.map(({ message, timestamp, user, userImage}) => (
+                    <Message
+                        message={message}
+                        timestamp={timestamp}
+                        user={user}
+                        userImage={userImage}
+                    />
+                ))}
             </div>
         </div>
     );
