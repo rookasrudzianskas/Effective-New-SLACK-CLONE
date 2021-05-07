@@ -26,4 +26,5 @@ const reducer = (state, action) => {
     }
 }
 
+// we make the reducer accessable anywhere in this app
 export default reducer;
